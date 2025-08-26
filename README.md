@@ -34,7 +34,7 @@ Execute o script `criar_instancia.sh` com o nome do projeto.
 ```bash
 cd scripts/
 ./criar_instancia.sh [nome_do_projeto]
-
+```
 
 ### 2. Publicar a Instância
 Após configurar os seus registros de DNS para apontarem para o IP do seu servidor, execute o script 
