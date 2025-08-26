@@ -1,10 +1,10 @@
-# [cite_start]Automação de Implantação Multi-Inquilino do Supabase [cite: 2603]
+# Automação de Implantação Multi-Inquilino do Supabase
 
-[cite_start]Este repositório contém um conjunto de scripts e configurações para automatizar a implantação de múltiplas instâncias isoladas do Supabase, geridas por um Nginx Reverse Proxy central[cite: 2605].
+Este repositório contém um conjunto de scripts e configurações para automatizar a implantação de múltiplas instâncias isoladas do Supabase, geridas por um Nginx Reverse Proxy central.
 
 ## Arquitetura
 
-[cite_start]A arquitetura utiliza um Nginx Reverse Proxy como ponto de entrada para todo o tráfego, encaminhando os pedidos para a instância Supabase correta com base no subdomínio[cite: 2608, 2609]. [cite_start]Cada instância opera na sua própria rede Docker, garantindo o isolamento de rede, configuração e dados[cite: 2613, 2615, 2617].
+A arquitetura utiliza um Nginx Reverse Proxy como ponto de entrada para todo o tráfego, encaminhando os pedidos para a instância Supabase correta com base no subdomínio. Cada instância opera na sua própria rede Docker, garantindo o isolamento de rede, configuração e dados.
 
 ## Configuração Inicial (Execução Única)
 
@@ -18,7 +18,7 @@
     ```bash
     docker network create nginx-proxy-net
     ```
-    [cite: 2678]
+
 3.  **Inicie o Nginx Reverse Proxy**:
     ```bash
     cd nginx-proxy/
