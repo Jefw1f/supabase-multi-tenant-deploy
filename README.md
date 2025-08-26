@@ -38,11 +38,11 @@ cd scripts/
 
 ### 2. Publicar a Instância
 Após configurar os seus registros de DNS para apontarem para o IP do seu servidor, execute o script 
-
+```bash
 publicar_instancia.sh.
 
-Bash
-
 cd scripts/
+
 # Certifique-se de que a variável EMAIL_CERTBOT no script está correta
 ./publicar_instancia.sh [nome_do_projeto] [dominio_base]
+```
