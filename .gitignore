@@ -1,0 +1,15 @@
+# Ignorar arquivos de ambiente que contêm segredos
+**/.env
+
+# Ignorar dados de banco de dados e de storage do molde
+supabase-mold/volumes/db/data/
+supabase-mold/volumes/storage/
+
+# Ignorar certificados SSL e logs do Nginx
+nginx-proxy/certbot/
+nginx-proxy/logs/
+nginx-proxy/conf.d/*.conf
+
+# Ignorar logs e outros arquivos de tempo de execução
+*.log
+erl_crash.dump
