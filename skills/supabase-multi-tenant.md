@@ -4,7 +4,7 @@ Configure isolated Supabase tenants for multi-project architecture on a single s
 
 ## Context
 
-When multiple projects (e.g., gbrain, Paperclip, Keyu) need Supabase/PostgreSQL on the same server, each project gets an isolated tenant (schema) with:
+When multiple projects need Supabase/PostgreSQL on the same server, each project gets an isolated tenant (schema) with:
 - Separate tables per tenant
 - Row Level Security (RLS) for data isolation
 - Custom port exposure (5435+) to avoid conflicts with native PostgreSQL
@@ -28,7 +28,7 @@ import paramiko
 TENANT_ID = 'project_name'  # Use snake_case
 TARGET_SERVER = 'TARGET_IP'  # Server hosting Supabase
 DB_CONTAINER = 'docker-db-1'
-DB_NAME = 'database_name'  # Usually keyu_production or postgres
+DB_NAME = 'database_name'  # Usually postgres or your database name
 
 client = paramiko.SSHClient()
 client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -94,7 +94,7 @@ import paramiko
 
 TARGET_SERVER = 'TARGET_IP'
 DB_CONTAINER = 'docker-db-1'
-CLIENT_IP = 'CLIENT_SERVER_IP'  # Server that will connect (e.g., 147.15.50.141)
+CLIENT_IP = 'CLIENT_SERVER_IP'  # Server that will connect
 
 client = paramiko.SSHClient()
 client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -157,7 +157,7 @@ gbrain doctor
 | Target Server | TARGET_IP |
 | Database Port | 5435 (exposed Docker PostgreSQL) |
 | Database User | postgres |
-| Database Name | postgres or keyu_production |
+| Database Name | postgres or your_database_name |
 | Schema | TENANT_ID |
 
 ## Troubleshooting
